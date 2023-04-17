@@ -1,0 +1,31 @@
+int main()
+{
+    enable_servos();
+    set_servo_position(3,495);
+    msleep(1000);
+    motor(1, 800);
+motor(3,-800);
+msleep(1000);
+    set_servo_position(3,1511);
+    msleep(1000);
+motor(1, 800);
+motor(3,-800);
+msleep(1000);
+    set_servo_position(3,495);
+    msleep(1000);
+    motor(1, 800);
+motor(3,-800);
+msleep(1000);
+    set_servo_position(3,1511);
+    msleep(1000);
+    motor(1, 800);
+motor(3,-800);
+msleep(1000);
+   set_servo_position(3,495);
+    msleep(1000);
+    disable_servos();
+      motor(1, 800);
+motor(3,-800);
+msleep(1000);
+return 0;
+}
