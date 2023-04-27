@@ -1,0 +1,45 @@
+int main()
+{
+   
+     enable_servos();
+     motor(1, 600);
+motor(3,-600);
+msleep(1200);
+        set_servo_position(3,495);
+    motor(1,700);
+motor(3,100);
+    msleep(730);
+    while(analog(0)<=3000);
+    {
+    motor(1,600);
+        motor(3,-600);
+        wait_for_milliseconds(1000);
+        set_servo_position(3,1511);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,495);
+         if(analog(1)>=3000);
+         motor(1,500);
+        motor(3,-600);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,1511);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,495);
+         if(analog(1)<=3000);
+         motor(1,600);
+        motor(3,-600);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,1511);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,495);
+         if(analog(0)>=3000);
+         motor(1,600);
+        motor(3,-500);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,1511);
+        wait_for_milliseconds(1200);
+        set_servo_position(3,495);
+    }
+     set_servo_position(3,1008);
+    msleep(1);
+    return;
+
